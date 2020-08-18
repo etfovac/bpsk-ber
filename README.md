@@ -1,4 +1,4 @@
-# bpsk-ber [![View BPSK system modeled and benchmarked against BER(SNR) on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/79224-bpsk-system-modeled-and-benchmarked-against-ber-snr) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/etfovac/bpsk-ber/blob/master/LICENSE) [![GitHub (pre-)release](https://img.shields.io/badge/release-1.0-yellow.svg)](https://github.com/etfovac/bpsk-ber/releases/tag/v1.0)
+# BPSK system modeled and benchmarked against BER(SNR) [![View BPSK system modeled and benchmarked against BER(SNR) on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/79224-bpsk-system-modeled-and-benchmarked-against-ber-snr) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/etfovac/bpsk-ber/blob/master/LICENSE) [![GitHub (pre-)release](https://img.shields.io/badge/release-1.0-yellow.svg)](https://github.com/etfovac/bpsk-ber/releases/tag/v1.0)
 
 ### Keywords:
 
@@ -33,8 +33,8 @@ For the assessment of BER, BPSK coding in the basic frequency range was used, ie
 
 
 ### Flowchart
-<img src="https://github.com/etfovac/bpsk-ber/blob/master/graphics/bpsk_system.png" alt="bpsk_system">  
-<img src="https://github.com/etfovac/bpsk-ber/blob/master/graphics/bpsk_signal.png" alt="bpsk_signal">  
+<img src="./graphics/bpsk_system.png" alt="bpsk_system">  
+<img src="./graphics/bpsk_signal.png" alt="bpsk_signal">  
 
 bit 1: 	s(t) = A cos(2πfct)    = +A cos(2πfct)   
 bit 0: 	s(t) = A cos(2πfct+ π) = -A cos(2πfct)   
@@ -43,13 +43,13 @@ s(t) =  A d(t) cos(2πfct)
 
 r(t) = s(t) + n(t)   
 
-<img src="https://github.com/etfovac/bpsk-ber/blob/master/graphics/bpsk_snr_formula.png" alt="bpsk_snr_formula" width="150" height="50">  
-<img src="https://github.com/etfovac/bpsk-ber/blob/master/graphics/bpsk_ber_formula.png" alt="bpsk_ber_formula" width="150" height="50">
+<img src="./graphics/bpsk_snr_formula.png" alt="bpsk_snr_formula" width="150" height="50">  
+<img src="./graphics/bpsk_ber_formula.png" alt="bpsk_ber_formula" width="150" height="50">
 
 ### Results
-<img src="https://github.com/etfovac/bpsk-ber/blob/master/graphics/bpsk_system_fig1.png" alt="bpsk_system_fig1">  
-<img src="https://github.com/etfovac/bpsk-ber/blob/master/graphics/bpsk_system_fig2.png" alt="bpsk_system_fig2">  
-<img src="https://github.com/etfovac/bpsk-ber/blob/master/graphics/bpsk_ber_fig1.png" alt="bpsk_ber_fig1">  
+<img src="./graphics/bpsk_system_fig1.png" alt="bpsk_system_fig1">  
+<img src="./graphics/bpsk_system_fig2.png" alt="bpsk_system_fig2">  
+<img src="./graphics/bpsk_ber_fig1.png" alt="bpsk_ber_fig1">  
 
 ```  
 BPSK simulation  
