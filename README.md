@@ -1,4 +1,4 @@
-# bpsk-ber [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/etfovac/bpsk-ber/blob/master/LICENSE) [![GitHub (pre-)release](https://img.shields.io/badge/release-1.0-yellow.svg)](https://github.com/etfovac/bpsk-ber/releases/tag/v1.0)
+# bpsk-ber [![View BPSK system modeled and benchmarked against BER(SNR) on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/79224-bpsk-system-modeled-and-benchmarked-against-ber-snr) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/etfovac/bpsk-ber/blob/master/LICENSE) [![GitHub (pre-)release](https://img.shields.io/badge/release-1.0-yellow.svg)](https://github.com/etfovac/bpsk-ber/releases/tag/v1.0)
 
 ### Keywords:
 
