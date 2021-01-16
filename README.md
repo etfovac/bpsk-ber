@@ -1,40 +1,27 @@
 # BPSK system modeled and benchmarked against BER(SNR) [![View BPSK system modeled and benchmarked against BER(SNR) on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/79224-bpsk-system-modeled-and-benchmarked-against-ber-snr) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/etfovac/bpsk-ber/blob/master/LICENSE) [![GitHub (pre-)release](https://img.shields.io/badge/release-1.0-yellow.svg)](https://github.com/etfovac/bpsk-ber/releases/tag/v1.0)
 
-### Keywords:
+### Keywords:  
+> BPSK,	Binary Phase Shift Keying  
+> AWGN, Additive white Gaussian noise  
+> SNR, Signal to Noise Ratio  
+> BER,	Bit Error Rate  
+> POE, Probability Of Error  
+> Digital Signal processing  
 
-> BPSK,	Binary Phase Shift Keying
-
-> AWGN, Additive white Gaussian noise	 
-
-> SNR, Signal to Noise Ratio
-
-> BER,	Bit Error Rate, POE, Probability Of Error
-
-> Digital Signal processing
-
-
-## Basic Overview
-In digital phase modulation, the bits that need to be transmitted are coded in the carrier phase change.  
+## Overview
 The simplest phase modulation, called Binary Phase Shift Keying (BPSK), uses two phases to encode two binary digits.  
 
-The BPSK modulator is implemented using an input data set (0 and 1) which is sent to the input of the BPSK encoder which has assigned voltages of -1V and + 1V to this bit sequence. The encoder output is multiplied by the carrier cosine signal.
-The integrator works as a low-pass filter and removes harmonics caused by multiplying the received signal by the carrier signal. The output of the integrator is led to a threshold detector which at the output reconstructs through 0 and 1.
-If the signal strength is sufficiently greater than the noise power at the link line, this detected bit string will be identical to the one sent.  
+Tx:  
+The BPSK modulator is implemented using an input data set (0 and 1) which is sent to the input of the BPSK encoder which has assigned voltages of -1V and + 1V to this bit sequence. The encoder output is multiplied by the carrier cosine signal. The bits that will be transmitted are coded in the carrier's phase change.  
 
-MATLAB simulation that mathematically models the process of determining BER performs the following:
-1. Creating BPSK symbols +1 and -1 from a randomly generated bit sequence (given length)
-2. Adding white (Gaussian) noise (for a given difference between signal level and noise)
-3. Detection of the received signal based on the reception threshold
-4. Counting errors and drawing BER graphics
+Rx:  
+The integrator works as a low-pass filter and removes harmonics caused by multiplying the received signal by the carrier signal. The output of the integrator is led to a threshold detector which at the output reconstructs through 0 and 1.  
 
-For the assessment of BER, BPSK coding in the basic frequency range was used, ie. modulation and demodulation were not simulated (moving the signal to a higher frequency, then back to baseband) due to the faster execution of the simulation and because the results are the same in both cases.
+If the signal strength is sufficiently greater than the noise power at the link line, this detected bit sequence will be identical to the one sent.  
 
-
-
-
-### Flowchart
-<img src="./graphics/bpsk_system.png" alt="bpsk_system">  
-<img src="./graphics/bpsk_signal.png" alt="bpsk_signal">  
+### Flowchart  
+<img src="./graphics/bpsk_system.png" alt="bpsk_system"  width="750" height="130">  
+<img src="./graphics/bpsk_signal.png" alt="bpsk_signal"  width="360" height="200">  
 
 bit 1: 	s(t) = A cos(2πfct)    = +A cos(2πfct)   
 bit 0: 	s(t) = A cos(2πfct+ π) = -A cos(2πfct)   
@@ -46,9 +33,31 @@ r(t) = s(t) + n(t)
 <img src="./graphics/bpsk_snr_formula.png" alt="bpsk_snr_formula" width="150" height="50">  
 <img src="./graphics/bpsk_ber_formula.png" alt="bpsk_ber_formula" width="150" height="50">
 
-### Results
+### Model 1: BPSK Tx-Rx system  
+MATLAB simulation models the following:
+1. Creating BPSK symbols +1 and -1 from a randomly generated bit sequence (given length)
+2. Adding white (Gaussian) noise (for a given difference between signal level and noise)
+3. Detection of the received signal based on the reception threshold
+4. Drawing input and output graphics
+
+#### Example Results  
+Configure and run script ```bpsk_transmission_system.m``` to understand the BPSK model.  
+
 <img src="./graphics/bpsk_system_fig1.png" alt="bpsk_system_fig1">  
 <img src="./graphics/bpsk_system_fig2.png" alt="bpsk_system_fig2">  
+
+### Model 2: BER vs SNR in BPSK Tx-Rx system  
+MATLAB simulation models the following:
+1. Creating BPSK symbols +1 and -1 from a randomly generated bit sequence (given length)
+2. Adding white (Gaussian) noise (for a given difference between signal level and noise)
+3. Detection of the received signal based on the reception threshold
+4. Counting errors and drawing BER graphics
+
+For the assessment of BER, BPSK coding in the basic frequency range was used, ie. modulation and demodulation were not simulated (moving the signal to a higher frequency, then back to baseband) due to the faster execution of the simulation and because we are bencmarking only channel's influence modelled by AWGN.
+
+Configure and run script ```bpsk_ber.m``` to generate BER vs SNR plots.  
+
+#### Example Results  
 <img src="./graphics/bpsk_ber_fig1.png" alt="bpsk_ber_fig1">  
 
 ```  
@@ -66,6 +75,7 @@ BPSK simulation
  BER = -3.782516 for SNR = 8  
  BER = -5.301030 for SNR = 10  
 ``` 
+
 ### Results Analysis
 The probability of incorrect bit detection (BER) is practically lost for a large SNR and is of the order of 1/N (1 bit in the sequence).  
 All BER curves follow the theoretical BER curve with small deviations.  
