@@ -82,3 +82,5 @@ All BER curves follow the theoretical BER curve with small deviations.
 Therefore, the BER does not depend on the number of bits transmitted.  
 The minimum SNR for which BPSK has 1 bit error depends on the total transmitted bits, so that for a larger number of transmitted bits, the SNR must be higher for the signal to be correctly reconstructed.  
 For example. when transmitting 100 bits, it is enough for the SNR to exceed 4 dB so that there is no transmission error, while for the transmission of 100,000 bits, the SNR must exceed 8 dB.  
+
+[View BPSK system modeled and benchmarked against BER(SNR) on File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/79224-bpsk-system-modeled-and-benchmarked-against-ber-snr)
