@@ -43,8 +43,8 @@ MATLAB simulation models the following:
 #### Example Results  
 Configure and run script ```bpsk_transmission_system.m``` to understand the BPSK model.  
 
-<img src="./graphics/bpsk_system_fig1.png" alt="bpsk_system_fig1">  
-<img src="./graphics/bpsk_system_fig2.png" alt="bpsk_system_fig2">  
+<img src="./graphics/bpsk_system_fig1_v2.png" alt="bpsk_system_fig1">  
+<img src="./graphics/bpsk_system_fig2_v2.png" alt="bpsk_system_fig2">  
 
 ### Model 2: BER vs SNR in BPSK Tx-Rx system  
 MATLAB simulation models the following:
