@@ -37,12 +37,12 @@ for snr = 1: 1: length(SNR)
     EbN0 = 10^(SNR(snr)/10); % 
     AWGN_sigma = sqrt(1/(EbN0*2));
     AWGN = AWGN_sigma * randn(1, length(bpsk_coded_signal));
-    primljeni_signal = bpsk_coded_signal + AWGN;
+    received_signal = bpsk_coded_signal + AWGN;
     % Decider's output
-    bpsk_dekodirani_biti = primljeni_signal >= 0;
+    bpsk_decoded_bits = received_signal >= 0;
 %---------------------------------------------------------------
 %   Received bits with error:
-    difference = (channel_bits) - (bpsk_dekodirani_biti);
+    difference = (channel_bits) - (bpsk_decoded_bits);
 %   Num of errors and received bits in curr. iteration:
     tot_err = sum(abs(difference));
     tot_bits = length(bpsk_coded_signal);
