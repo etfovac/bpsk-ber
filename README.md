@@ -54,19 +54,19 @@ r(t) = s(t) + n(t)
 ```  
 BPSK simulation  
  BPSK - num of data bits to transfer through the channel: 1000000  
- BER = -0.484644 za SNR = -10  
- BER = -0.542406 za SNR = -8  
- BER = -0.622411 za SNR = -6  
- BER = -0.731174 za SNR = -4  
- BER = -0.884889 za SNR = -2  
- BER = -1.105961 za SNR = 0  
- BER = -1.425159 za SNR = 2  
- BER = -1.902257 za SNR = 4  
- BER = -2.618704 za SNR = 6  
- BER = -3.782516 za SNR = 8  
- BER = -5.301030 za SNR = 10  
+ BER = -0.484644 for SNR = -10  
+ BER = -0.542406 for SNR = -8  
+ BER = -0.622411 for SNR = -6  
+ BER = -0.731174 for SNR = -4  
+ BER = -0.884889 for SNR = -2  
+ BER = -1.105961 for SNR = 0  
+ BER = -1.425159 for SNR = 2  
+ BER = -1.902257 for SNR = 4  
+ BER = -2.618704 for SNR = 6  
+ BER = -3.782516 for SNR = 8  
+ BER = -5.301030 for SNR = 10  
 ``` 
-### Conclusion
+### Results Analysis
 The probability of incorrect bit detection (BER) is practically lost for a large SNR and is of the order of 1/N (1 bit in the sequence).  
 All BER curves follow the theoretical BER curve with small deviations.  
 Therefore, the BER does not depend on the number of bits transmitted.  
