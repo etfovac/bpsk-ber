@@ -58,7 +58,7 @@ For the assessment of BER, BPSK coding in the basic frequency range was used, ie
 Configure and run script ```bpsk_ber.m``` to generate BER vs SNR plots.  
 
 #### Example Results  
-<img src="./graphics/bpsk_ber_fig1.png" alt="bpsk_ber_fig1_v2">  
+<img src="./graphics/bpsk_ber_fig1_v2.png" alt="bpsk_ber_fig1">  
 
 ```  
 Input parameters:
