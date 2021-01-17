@@ -58,29 +58,69 @@ For the assessment of BER, BPSK coding in the basic frequency range was used, ie
 Configure and run script ```bpsk_ber.m``` to generate BER vs SNR plots.  
 
 #### Example Results  
-<img src="./graphics/bpsk_ber_fig1.png" alt="bpsk_ber_fig1">  
+<img src="./graphics/bpsk_ber_fig1_v2.png" alt="bpsk_ber_fig1">  
 
 ```  
-BPSK simulation  
- BPSK - num of data bits to transfer through the channel: 1000000  
- BER = -0.484644 for SNR = -10  
- BER = -0.542406 for SNR = -8  
- BER = -0.622411 for SNR = -6  
- BER = -0.731174 for SNR = -4  
- BER = -0.884889 for SNR = -2  
- BER = -1.105961 for SNR = 0  
- BER = -1.425159 for SNR = 2  
- BER = -1.902257 for SNR = 4  
- BER = -2.618704 for SNR = 6  
- BER = -3.782516 for SNR = 8  
- BER = -5.301030 for SNR = 10  
+Input parameters:
+Num of data bits to transfer through the channel = 5000 10000 50000 100000 500000 1e+06 5e+06 1e+07
+SNR (dB) = -4.0 -2.0 0.0 2.0 4.0 6.0 8.0 10.0 12.0
+
+* BPSK simulation *
+Number of bits: 5000 
+BER = -0.748119 for SNR = -4.0 
+BER = -0.904482 for SNR = -2.0 
+BER = -1.124939 for SNR = 0.0 
+BER = -1.406714 for SNR = 2.0 
+BER = -2.036212 for SNR = 4.0 
+BER = -2.853872 for SNR = 6.0 
+BER = -Inf for SNR = 8.0 
+BER = -Inf for SNR = 10.0 
+BER = -Inf for SNR = 12.0 
+
+* BPSK simulation *
+Number of bits: 10000 
+BER = -0.729787 for SNR = -4.0 
+BER = -0.892451 for SNR = -2.0 
+BER = -1.112946 for SNR = 0.0 
+BER = -1.383000 for SNR = 2.0 
+BER = -1.920819 for SNR = 4.0 
+BER = -2.795880 for SNR = 6.0 
+BER = -Inf for SNR = 8.0 
+BER = -Inf for SNR = 10.0 
+BER = -Inf for SNR = 12.0 
+
+...
+
+* BPSK simulation *
+Number of bits: 5e+06 
+BER = -0.729917 for SNR = -4.0 
+BER = -0.884020 for SNR = -2.0 
+BER = -1.104215 for SNR = 0.0 
+BER = -1.425779 for SNR = 2.0 
+BER = -1.901612 for SNR = 4.0 
+BER = -2.622876 for SNR = 6.0 
+BER = -3.719422 for SNR = 8.0 
+BER = -5.522879 for SNR = 10.0 
+BER = -Inf for SNR = 12.0 
+
+* BPSK simulation *
+Number of bits: 1e+07 
+BER = -0.729896 for SNR = -4.0 
+BER = -0.884042 for SNR = -2.0 
+BER = -1.105083 for SNR = 0.0 
+BER = -1.427471 for SNR = 2.0 
+BER = -1.902986 for SNR = 4.0 
+BER = -2.618542 for SNR = 6.0 
+BER = -3.728623 for SNR = 8.0 
+BER = -5.376751 for SNR = 10.0 
+BER = -Inf for SNR = 12.0  
 ``` 
 
 ### Results Analysis
 The probability of incorrect bit detection (BER) is practically lost for a large SNR and is of the order of 1/N (1 bit in the sequence).  
 All BER curves follow the theoretical BER curve with small deviations.  
-Therefore, the BER does not depend on the number of bits transmitted.  
+ 
 The minimum SNR for which BPSK has 1 bit error depends on the total transmitted bits, so that for a larger number of transmitted bits, the SNR must be higher for the signal to be correctly reconstructed.  
-For example. when transmitting 100 bits, it is enough for the SNR to exceed 4 dB so that there is no transmission error, while for the transmission of 100,000 bits, the SNR must exceed 8 dB.  
+For example: when transmitting 5 kb, it is enough for the SNR to exceed 6 dB so that there is no transmission error, while for the transmission of 5 Mb, the SNR must exceed 10 dB.  
 
 [View BPSK system modeled and benchmarked against BER(SNR) on File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/79224-bpsk-system-modeled-and-benchmarked-against-ber-snr)
