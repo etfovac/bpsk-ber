@@ -8,7 +8,7 @@
 > SNR, Signal to Noise Ratio  
 > BER,	Bit Error Rate  
 > POE, Probability Of Error  
-> Digital Signal processing  
+> Digital Signal Processing  
 
 ## Overview
 The simplest phase modulation, called Binary Phase Shift Keying (BPSK), uses two phases to encode two binary digits.  
