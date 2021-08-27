@@ -9,6 +9,12 @@
 > BER,	Bit Error Rate  
 > POE, Probability Of Error  
 > Digital Signal Processing  
+## Live Script Examples (.MLX files)
+
+Check Live Script Examples to see how to use this repository:  
+* GettingStarted.mlx  
+* BPSK_BER.mlx  
+* BPSK_Signals.mlx  
 
 ## Overview
 The simplest phase modulation, called Binary Phase Shift Keying (BPSK), uses two phases to encode two binary digits.  
